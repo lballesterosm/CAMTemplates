@@ -1,0 +1,48 @@
+{
+    "name": "SingleVirtualMachine",
+    "description": "Create Virtual Machine with single nic",
+    "type": "prebuilt",
+    "version": "1.0",
+    "manifest": {
+      "template_type": "Terraform",
+      "template_format": "HCL",
+      "template_provider": "VMWare vCD",
+      "template": {
+        "templateOutput": "",
+        "templateVariables": "",
+        "templateData": ""
+      },
+      "template_source": {
+        "githubRepoUrl": "",
+        "githubAccessToken": "",
+        "relativePathToTemplateFolder": "vCloudsingleVM",
+        "templateFileName": "main.tf"
+      }
+    },
+    "metadata": {
+        "displayName": "vCloudSingleVirtualMachine",
+        "longDescription": "Create Virtual Machine with single vnic on a network label by cloning",
+        "bullets": [
+         {
+           "title": "Clouds",
+           "description": "vCloud Director"
+         },
+         {
+             "title": "Operating systems supported",
+             "descrition": "CentOS Canonical"
+         },
+         {
+           "title": "Topology",
+           "description": "Single virtual machine"
+         },
+         {
+           "title": "Default Virtual Machine settings",
+           "description": "Standard machine type with 1 virtual CPU and 1 GB of memory."
+         },
+         {
+           "title": "Usage and special notes",
+           "description": "A typical deployment takes < 5 minutes."
+         }
+        ]
+    }
+  }
