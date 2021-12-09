@@ -1,5 +1,5 @@
 {
-    "name": "SingleVirtualMachine",
+    "name": "vCDSingleVirtualMachine",
     "description": "Create Virtual Machine with single nic",
     "type": "prebuilt",
     "version": "1.0",
