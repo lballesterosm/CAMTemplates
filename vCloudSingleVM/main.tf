@@ -6,9 +6,6 @@
 ##############################################################
 
 provider "vcd" {
-  allow_unverified_ssl = "true"
-  auth_type = "integrated"
-  max_retry_timeout = "120"
 }
 
 provider "camc" {
