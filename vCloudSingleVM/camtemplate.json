@@ -21,7 +21,7 @@
     },
     "metadata": {
         "displayName": "vCloudSingleVirtualMachine",
-        "longDescription": "Create Virtual Machine with single vnic on a network label by cloning",
+        "longDescription": "Create Virtual Machine with single vnic",
         "bullets": [
          {
            "title": "Clouds",
@@ -29,7 +29,7 @@
          },
          {
              "title": "Operating systems supported",
-             "descrition": "CentOS Canonical"
+             "description": "CentOS Canonical"
          },
          {
            "title": "Topology",

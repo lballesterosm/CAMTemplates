@@ -6,6 +6,9 @@
 ##############################################################
 
 provider "vcd" {
+  version = "~> 3.4"
+  allow_unverified_ssl = "true"
+  source = "vmware/vcd"
 }
 
 provider "camc" {
