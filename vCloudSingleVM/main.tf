@@ -1,5 +1,12 @@
 # This is a terraform generated template generated from blueprint89
-
+terraform {
+  required_providers {
+    vcd = {
+      source  = "vmware/vcd"
+      version = "3.4.0"
+    }
+  }
+}
 
 ##############################################################
 # Define the vcd provider 
