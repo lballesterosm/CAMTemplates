@@ -24,16 +24,50 @@
     ],
     "template_input_params": [
       {
-            "name": "vm_1_name",
-            "type": "string",
-            "description": "Name of VM at OS level",
-            "default": "vm-1",
-            "hidden": false,
-            "label": "VM Hostname",
-            "secured": false,
-            "required": true,
-            "immutable": false,
-            "group_name": "virtualmachine"
+        "name": "vcd_user",
+        "type": "string",
+        "description": "vCD User",
+        "default": "admin",
+        "hidden": false,
+        "label": "vCD User with admin rights",
+        "secured": false,
+        "required": true,
+        "immutable": false,
+        "group_name": "virtualmachine"
+      },
+      {
+        "name": "vcd_password",
+        "type": "string",
+        "description": "vCD User password",
+        "hidden": false,
+        "label": "vCD User with admin rights",
+        "secured": true,
+        "required": true,
+        "immutable": false,
+        "group_name": "virtualmachine"
+      },
+      {
+        "name": "vcd_url",
+        "type": "string",
+        "description": "vCD API URL",
+        "hidden": false,
+        "label": "vCD User with admin rights",
+        "secured": true,
+        "required": true,
+        "immutable": false,
+        "group_name": "virtualmachine"
+      },
+      {
+        "name": "vm_1_name",
+        "type": "string",
+        "description": "Name of VM at OS level",
+        "default": "vm-1",
+        "hidden": false,
+        "label": "VM Hostname",
+        "secured": false,
+        "required": true,
+        "immutable": false,
+        "group_name": "virtualmachine"
       },  
       {
         "name": "vm_1-image",
