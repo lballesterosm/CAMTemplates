@@ -27,7 +27,7 @@ provider "camc" {
 }
 
 ##############################################################
-# Vsphere data for provider
+# network data
 ##############################################################
 
 data "vcd_network_routed" "net" {
@@ -37,16 +37,11 @@ data "vcd_network_routed" "net" {
   
 }
 
-data "vsphere_virtual_machine" "vm_1_template" {
-  name          = var.vm_1-image
-  
-}
-
 ##### Image Parameters variables #####
 
 #Variable : vm_1_name
 variable "vm_1_name" {
-  type        = string
+  type        = "string"
   description = "Generated"
   default     = "vm_1"
 }
