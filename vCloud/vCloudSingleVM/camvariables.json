@@ -1,0 +1,45 @@
+{
+  "template_input_params": [
+    {
+      "name": "vm_1_image",
+      "label": "vm_1_image",
+      "type": "string",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_memory",
+      "label": "vm_1_memory",
+      "type": "string",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_name",
+      "label": "vm_1_name",
+      "type": "string",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_vcpu",
+      "label": "vm_1_vcpu",
+      "type": "string",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    }
+  ],
+  "template_output_params": []
+}
