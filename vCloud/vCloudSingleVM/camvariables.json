@@ -57,6 +57,28 @@
       "secured": false,
       "hidden": false,
       "immutable": false
+    },
+    {
+      "name": "vm_1_subnet",
+      "label": "vm_1_subnet",
+      "type": "string",
+      "default": "my-net",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "options":[
+        {
+          "value": "my-net",
+          "label": "my-net",
+          "default": "true"
+        },
+        {
+          "value": "QA",
+          "label":"QA"
+        }
+      ]
     }
   ],
   "template_output_params": []
