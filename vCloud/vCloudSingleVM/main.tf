@@ -19,6 +19,10 @@ variable "vm_1_image" {
     
 }
 
+variable "vm_1_subnet" {
+
+}
+
 
 provider "vcd" {
   user      = "admin"
@@ -43,18 +47,10 @@ provider "vcd" {
   memory        = var.vm_1_memory
 
   network {
-    name               = "my-net"
+    name               = var.vm_1_subnet
     type               = "org"
 	ip_allocation_mode = "DHCP"
 	is_primary = true
   }
-
-  customization {
-    allow_local_admin_password = true
-    auto_generate_password     = false
-    admin_password             = "Acero2018"
-    # Other customization options to override the ones from template
-  }
-
 
 }
