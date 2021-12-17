@@ -12,7 +12,7 @@
       "options": [
         {
           "value": "New-RedHat-7-Template-Official",
-          "label": "New-RedHat-7-Template-Official"
+          "label": "New-RedHat-7-Template-Official",
           "default": "true"
         },
         {
