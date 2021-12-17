@@ -1,0 +1,59 @@
+{
+    "template_input_params": [
+      {
+        "name": "subnet_name",
+        "label": "subnet_name",
+        "type": "string",
+        "description": "Subnet name",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false        
+      },
+      {
+        "name": "dhcp_start_ip",
+        "label": "dhcp_start_ip",
+        "type": "string",
+        "description": "First ipaddress in the DHCP Pool",
+        "default": "172.168.2.3",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "dhcp_end_ip",
+        "label": "dhcp_end_ip",
+        "type": "string",
+        "description": "First ipaddress in the DHCP Pool",
+        "default": "172.168.2.60",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "edge_gw",
+        "label": "edge_gw",
+        "type": "string",
+        "default": "edge-dal10-a5aaf2fc",
+        "description": "Gateway for routed connections",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "dns1",
+        "label": "dns1",
+        "type": "string",
+        "default": "172.168.2.1",
+        "description": "",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      }
+    ],
+    "template_output_params": []
+  }

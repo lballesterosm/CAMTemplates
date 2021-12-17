@@ -1,0 +1,43 @@
+{
+    "name": "vCloudDHCPSubnet",
+    "description": "Create a subnet with DHCP pool address on vCloud",
+    "version": "1.0",
+    "manifest": {
+      "template_type": "Terraform",
+      "template_format": "HCL",
+      "template_provider": "Other",
+      "template": {
+        "templateOutput": "",
+        "templateVariables": "",
+        "templateData": ""
+      },
+      "template_source": {
+        "githubRepoUrl": "",
+        "githubAccessToken": "",
+        "relativePathToTemplateFolder": "/vCloudDHCPSubnet",
+        "templateFileName": "main.tf"
+      }
+    },
+    "metadata": {
+        "displayName": "vCloudDHCPSubnet",
+        "longDescription": "Create a subnet with DHCP pool ip address",
+        "bullets": [
+         {
+           "title": "Clouds",
+           "description": "vCloud"
+         },
+         {
+           "title": "Topology",
+           "description": "Single subnet"
+         },
+         {
+           "title": "Default Virtual Machine settings",
+           "description": "Standard machine type with 1 virtual CPU and 1 GB of memory."
+         },
+         {
+           "title": "Usage and special notes",
+           "description": "A typical deployment takes < 1 minute."
+         }
+        ]
+    }
+  }
