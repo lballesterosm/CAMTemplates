@@ -4,17 +4,33 @@
       "name": "vm_1_image",
       "label": "vm_1_image",
       "type": "string",
-      "description": "",
+      "description": "OS image to deploy",
       "required": true,
       "secured": false,
       "hidden": false,
-      "immutable": false
+      "immutable": false,
+      "options": [
+        {
+          "value": "New-RedHat-7-Template-Official",
+          "label": "New-RedHat-7-Template-Official"
+          "default": "true"
+        },
+        {
+          "value": "CentOS-7-Template-Official",
+          "label": "CentOS-7-Template-Official"
+        },
+        {
+          "value": "Windows-2016-Template-Official",
+          "label": "Windows-2016-Template-Official"
+        }
+      ]
     },
     {
       "name": "vm_1_memory",
       "label": "vm_1_memory",
       "type": "string",
-      "description": "",
+      "description": "RAM in MB",
+      "default": "1024",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -24,7 +40,8 @@
       "name": "vm_1_name",
       "label": "vm_1_name",
       "type": "string",
-      "description": "",
+      "default": "server01",
+      "description": "Hostname at OS level",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -34,6 +51,7 @@
       "name": "vm_1_vcpu",
       "label": "vm_1_vcpu",
       "type": "string",
+      "default": "1",
       "description": "",
       "required": true,
       "secured": false,
