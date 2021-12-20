@@ -29,10 +29,6 @@ variable "power_image" {
 
 }
 
-variable "power_replicas" {
-
-}
-
 variable "power_network" {
 
 }
