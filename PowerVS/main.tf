@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    ibm = {
-      source = "IBM-Cloud/ibm"
-      version = "~> 1.12.0"
-    }
-  }
-}
-
 # Configure the IBM Provider
 provider "ibm" {
   region = "us-south"
@@ -24,14 +15,19 @@ resource "ibm_compute_ssh_key" "test_key_1" {
   public_key = var.ssh_public_key
 }
 
-# Create a virtual server with the SSH key
-resource "ibm_compute_vm_instance" "lpar" {
-  hostname          = "host-b.example.com"
-  domain            = "example.com"
-  ssh_key_ids       = [123456, ibm_compute_ssh_key.test_key_1.id]
-  os_reference_code = "CENTOS_6_64"
-  datacenter        = "dal10"
-  network_speed     = 10
-  cores             = 1
-  memory            = 1024
+# Create a Power virtual server instance
+resource "ibm_pi_instance" "test-instance" {
+    pi_memory             = "4"
+    pi_processors         = "2"
+    pi_instance_name      = "test-vm"
+    pi_proc_type          = "shared"
+    pi_image_id           = "${data.ibm_pi_image.powerimages.id}"
+    pi_key_pair_name      = ibm_pi_key.key.key_id
+    pi_sys_type           = "s922"
+    pi_cloud_instance_id  = "51e1879c-bcbe-4ee1-a008-49cdba0eaf60"
+    pi_pin_policy         = "none"
+    pi_health_status      = "WARNING"
+    pi_network {
+      network_id = data.ibm_pi_public_network.dsnetwork.id
+    }
 }
