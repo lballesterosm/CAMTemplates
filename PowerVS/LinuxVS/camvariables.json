@@ -22,6 +22,17 @@
         "hidden": false,
         "immutable": false
     },
+    {
+        "name": "power_placement_group",
+        "label": "power_placement_group",
+        "type": "string",
+        "default": "none",
+        "description": "power_replicas",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+    },
       {
         "name": "power_memory",
         "label": "VS memory (in GB)",
