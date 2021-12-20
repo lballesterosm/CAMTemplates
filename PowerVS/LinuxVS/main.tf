@@ -66,7 +66,7 @@ resource "ibm_pi_instance" "VirtualServerInstance" {
     pi_memory             = var.power_memory
     pi_processors         = var.power_cores
     pi_proc_type          = var.power_core_type
-    pi_image_id           = ["${data.ibm_pi_image.power_images.id}"]
+    pi_image_id           = ["${data.ibm_pi_image.power_images.image_id}"]
     pi_key_pair_name      = var.power_ssh_key
     pi_sys_type           = var.power_machine_type
     pi_pin_policy         = var.power_vm_pinning
