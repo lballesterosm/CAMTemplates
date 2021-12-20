@@ -19,24 +19,24 @@
       }
     },
     "metadata": {
-        "displayName": "vCloudSingleVM",
-        "longDescription": "Create a Virtual Machine with single vnic on vCloud",
+        "displayName": "PowerVS Linux based",
+        "longDescription": "Create a Power Virtual Server (LPAR) with basic parameters",
         "bullets": [
          {
            "title": "Clouds",
-           "description": "vCloud"
+           "description": "PowerVS"
          },
          {
            "title": "Topology",
-           "description": "Single virtual machine"
+           "description": "Single Virtual Server Instance"
          },
          {
            "title": "Default Virtual Machine settings",
-           "description": "Standard machine type with 1 virtual CPU and 1 GB of memory."
+           "description": "Standard virtual server instance with 0.25 cores and 2 GB of memory."
          },
          {
            "title": "Usage and special notes",
-           "description": "A typical deployment takes < 1 minute."
+           "description": "A typical deployment takes < 10 minute."
          }
         ]
     }

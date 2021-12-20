@@ -1,0 +1,132 @@
+{
+    "template_input_params": [
+      {
+          "name": "power_instance_name",
+          "label": "VS Instance Name",
+          "type": "string",
+          "default": "lpar01",
+          "description": "Virtual Server Instance Name",
+          "required": true,
+          "secured": false,
+          "hidden": false,
+          "immutable": false
+      },
+      {
+        "name": "power_memory",
+        "label": "VS memory (in GB)",
+        "type": "string",
+        "description": "Virtual Server Instance RAM in GB",
+        "default": "2",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "power_cores",
+        "label": "Cores",
+        "type": "string",
+        "default": "0.25",
+        "description": "",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "power_core_type",
+        "label": "VS core type",
+        "type": "string",
+        "description": "",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false,
+        "options": [
+            {
+              "value": "shared",
+              "label": "shared",
+              "default": "true"
+            },
+            {
+              "value": "dedicated",
+              "label": "dedicated"
+            },
+            {
+              "value": "uncapped",
+              "label": "uncapped"
+            }
+          ]
+      },
+      {
+        "name": "power_image",
+        "label": "VS Image",
+        "type": "string",
+        "description": "Virtual Server Instance image",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false,
+        "options": [
+          {
+            "value": "7100-05-04",
+            "label": "7100-05-04",
+            "default": "true"
+          },
+          {
+            "value": "7100-05-05",
+            "label": "7100-05-05"
+          },
+          {
+            "value": "7100-05-07",
+            "label": "7100-05-07"
+          }
+        ]
+      },      
+      {
+        "name": "power_ssh_key",
+        "label": "power_ssh_key",
+        "type": "string",
+        "default": "power_key",
+        "description": "",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "power_machine_type",
+        "label": "power_machine_type",
+        "type": "string",
+        "default": "e880",
+        "description": "",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "power_vm_pinning",
+        "label": "power_vm_pinning",
+        "type": "string",
+        "default": "none",
+        "description": "",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "power_network",
+        "label": "power_network",
+        "type": "string",
+        "default": "prod",
+        "description": "",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+      }
+    ],
+    "template_output_params": []
+  }
