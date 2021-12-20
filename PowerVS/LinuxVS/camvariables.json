@@ -75,8 +75,8 @@
               "label": "dedicated"
             },
             {
-              "value": "uncapped",
-              "label": "uncapped"
+              "value": "capped",
+              "label": "capped"
             }
           ]
       },
