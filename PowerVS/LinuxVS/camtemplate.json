@@ -1,5 +1,5 @@
 {
-    "name": "vCloudSingleVM",
+    "name": "PowerSingleVS",
     "description": "Create an Linux Virtual Server Instance",
     "version": "1.0",
     "manifest": {
