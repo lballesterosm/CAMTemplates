@@ -12,6 +12,17 @@
           "immutable": false
       },
       {
+        "name": "power_replicas",
+        "label": "power_replicas",
+        "type": "string",
+        "default": "1",
+        "description": "power_replicas",
+        "required": true,
+        "secured": false,
+        "hidden": false,
+        "immutable": false
+    },
+      {
         "name": "power_memory",
         "label": "VS memory (in GB)",
         "type": "string",
