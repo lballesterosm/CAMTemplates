@@ -51,8 +51,7 @@ variable "power_memory" {
 }
 
 data "ibm_pi_network" "power_networks" {
-    count                = "${length(var.power_network)}"
-    pi_network_name      = "${var.power_network[count.index]}"
+    pi_network_name      = var.power_network
     pi_cloud_instance_id = "c2af394e-33b8-4154-9275-f69f5d65dc0d"
 }
 
