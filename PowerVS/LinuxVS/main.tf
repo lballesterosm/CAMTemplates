@@ -66,7 +66,7 @@ resource "ibm_pi_instance" "VirtualServerInstance" {
     pi_sys_type           = var.power_machine_type
     pi_pin_policy         = var.power_vm_pinning
     pi_cloud_instance_id  = "c2af394e-33b8-4154-9275-f69f5d65dc0d"
-    pi_network_ids        = ["${data.ibm_pi_network.power_networks.*.network_id}"]
+    pi_network_ids        = ["${data.ibm_pi_network.power_networks.id}"]
     pi_replicants         = var.power_replicas
     pi_storage_type       = "tier3"
     
