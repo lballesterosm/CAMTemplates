@@ -27,7 +27,7 @@
         "label": "power_placement_group",
         "type": "string",
         "default": "none",
-        "description": "power_replicas",
+        "description": "power_placement_group",
         "required": true,
         "secured": false,
         "hidden": false,
@@ -120,12 +120,26 @@
         "name": "power_machine_type",
         "label": "power_machine_type",
         "type": "string",
-        "default": "e880",
         "description": "",
         "required": true,
         "secured": false,
         "hidden": false,
-        "immutable": false
+        "immutable": false,
+        "options": [
+            {
+              "value": "e880",
+              "label": "e880",
+              "default": "true"
+            },
+            {
+              "value": "e980",
+              "label": "e980"
+            },
+            {
+              "value": "e922",
+              "label": "e922"
+            }
+        ]    
       },
       {
         "name": "power_vm_pinning",
