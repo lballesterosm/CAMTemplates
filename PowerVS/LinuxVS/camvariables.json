@@ -91,8 +91,8 @@
         "immutable": false,
         "options": [
           {
-            "value": "7100-05-04",
-            "label": "7100-05-04",
+            "value": "Linux-CentOS-8-3",
+            "label": "Linux-CentOS-8-3",
             "default": "true"
           },
           {
