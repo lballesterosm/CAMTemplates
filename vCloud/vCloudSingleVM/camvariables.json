@@ -27,7 +27,7 @@
     },
     {
       "name": "vm_1_memory",
-      "label": "vm_1_memory",
+      "label": "Memory in MB",
       "type": "string",
       "description": "RAM in MB",
       "default": "1024",
@@ -38,10 +38,10 @@
     },
     {
       "name": "vm_1_name",
-      "label": "vm_1_name",
+      "label": "VM name at vCloud level",
       "type": "string",
       "default": "server01",
-      "description": "Hostname at OS level",
+      "description": "VM name at vCloud level",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -49,7 +49,7 @@
     },
     {
       "name": "vm_1_vcpu",
-      "label": "vm_1_vcpu",
+      "label": "Virtual CPUs",
       "type": "string",
       "default": "1",
       "description": "",
@@ -60,7 +60,7 @@
     },
     {
       "name": "vm_1_subnet",
-      "label": "vm_1_subnet",
+      "label": "Subnet",
       "type": "string",
       "default": "my-net",
       "description": "",
@@ -70,8 +70,8 @@
       "immutable": false,
       "options":[
         {
-          "value": "my-net",
-          "label": "my-net",
+          "value": "prod",
+          "label": "prod",
           "default": "true"
         },
         {
