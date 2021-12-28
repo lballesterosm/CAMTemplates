@@ -2,7 +2,7 @@
   "template_input_params": [
     {
       "name": "vm_1_image",
-      "label": "vm_1_image",
+      "label": "OC Image",
       "type": "string",
       "description": "OS image to deploy",
       "required": true,

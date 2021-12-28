@@ -36,7 +36,7 @@ provider "vcd" {
   network {
     name               = var.vm_1_subnet
     type               = "org"
-	ip_allocation_mode = "DHCP"
+	ip_allocation_mode = "POOL"
 	is_primary = true
   }
 
