@@ -54,7 +54,7 @@ data "vcd_vm" "target_vm" {
 }
 
 output "vm_password" {
-  value = data.vcd_vm.target_vm.customization.admin_password
+  value = data.vcd_vm.target_vm.customization.*.admin_password
 }
 output "vm_ip" {
   description = "VM IP address"
