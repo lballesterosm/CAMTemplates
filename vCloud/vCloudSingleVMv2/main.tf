@@ -16,10 +16,6 @@ variable "vm_1_subnet" {
 
 }
 
-variable "vm_1_password" {
-
-}
-
 
 provider "vcd" {
   version = "3.4.0"
