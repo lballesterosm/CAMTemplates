@@ -1,0 +1,60 @@
+{
+  "template_input_params": [
+    {
+      "name": "cantidad",
+      "label": "Workers",
+      "type": "string",
+      "default": "2",
+      "description": "Worker quantity in the cluster",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_vcpu",
+      "label": "Virtual CPUs",
+      "type": "string",
+      "default": "1",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_memory",
+      "label": "Memory in MB",
+      "type": "string",
+      "description": "RAM in MB",
+      "default": "1024",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_subnet",
+      "label": "Subnet",
+      "type": "string",
+      "default": "my-net",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "options":[
+        {
+          "value": "prod",
+          "label": "prod",
+          "default": "true"
+        },
+        {
+          "value": "QA",
+          "label":"QA"
+        }
+      ]
+    }
+  ],
+  "template_output_params": []
+}

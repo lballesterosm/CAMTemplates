@@ -1,0 +1,43 @@
+{
+    "name": "vCloudSingleVMv2",
+    "description": "Create a Virtual Machine with single vnic on vCloud",
+    "version": "1.0",
+    "manifest": {
+      "template_type": "Terraform",
+      "template_format": "HCL",
+      "template_provider": "vcd",
+      "template": {
+        "templateOutput": "",
+        "templateVariables": "",
+        "templateData": ""
+      },
+      "template_source": {
+        "githubRepoUrl": "",
+        "githubAccessToken": "",
+        "relativePathToTemplateFolder": "/Openshiftv4",
+        "templateFileName": "main.tf"
+      }
+    },
+    "metadata": {
+        "displayName": "Openshiftv4 deployment on vCloud",
+        "longDescription": "Create an Openshift cluster ver 4.8 on vCloud",
+        "bullets": [
+         {
+           "title": "Clouds",
+           "description": "vCloud"
+         },
+         {
+           "title": "Topology",
+           "description": "3 master nodes + n workers nodes"
+         },
+         {
+           "title": "Default settings",
+           "description": "3 master nodes with 4 CPU and 8 GB RAM. Worker nodes are configurables. No aditional storage added."
+         },
+         {
+           "title": "Usage and special notes",
+           "description": "A typical deployment takes < 1 minute."
+         }
+        ]
+    }
+  }
