@@ -22,7 +22,7 @@ provider "vcd" {
 
 }
 
- resource "vcd_vm" "VirtualMachine" {
+resource "vcd_vm" "VirtualMachine" {
   
   org = "dae691dbea51489088e89e813ba339b9"
   vdc = "vmware-dc"
