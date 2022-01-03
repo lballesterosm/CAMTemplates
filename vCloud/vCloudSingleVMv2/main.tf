@@ -49,12 +49,7 @@ provider "vcd" {
 	is_primary = true
   }
 
-  customization {
-    allow_local_admin_password = true 
-    auto_generate_password     = false
-    admin_password             = var.vm_1_password
-  }
-  
+
 }
 
 data "vcd_vm" "target_vm" {

@@ -12,16 +12,6 @@
       "immutable": false
     },
     {
-      "name": "vm_1_password",
-      "label": "root or administrator password",
-      "type": "string",
-      "description": "root or administrator password",
-      "required": true,
-      "secured": true,
-      "hidden": false,
-      "immutable": false
-    },    
-    {
       "name": "vm_1_image",
       "label": "OS Image",
       "type": "string",
