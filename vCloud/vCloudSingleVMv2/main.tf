@@ -37,6 +37,11 @@ provider "vcd" {
   cpus          = var.vm_1_vcpu
   memory        = var.vm_1_memory
 
+  guest_properties = {
+    "guest.hostname"   = var.vm_1_name
+    
+  }
+
   network {
     name               = var.vm_1_subnet
     type               = "org"
