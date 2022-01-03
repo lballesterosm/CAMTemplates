@@ -62,6 +62,12 @@ data "vcd_vm" "target_vm" {
 }
 
 
-output "vm_details" {
-  value = data.vcd_vm.target_vm
+output "vm_ip" {
+  description = "VM IP address"
+  value = data.vcd_vm.target_vm.*.ip
+}
+
+output "vm_mac" {
+  description = "MAC IP address"
+  value = data.vcd_vm.target_vm.*.mac
 }
