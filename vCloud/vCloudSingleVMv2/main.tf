@@ -32,11 +32,7 @@ provider "vcd" {
   template_name = var.vm_1_image
   cpus          = var.vm_1_vcpu
   memory        = var.vm_1_memory
-
-  guest_properties = {
-    "guest.hostname"   = var.vm_1_name
-    
-  }
+  computer_name = var.vm_1_name
 
   network {
     name               = var.vm_1_subnet
@@ -57,7 +53,9 @@ data "vcd_vm" "target_vm" {
    ]
 }
 
-
+output "vm_password" {
+  value = data.vcd_vm.target_vm.customization.admin_password
+}
 output "vm_ip" {
   description = "VM IP address"
   value = data.vcd_vm.target_vm.network.*.ip
