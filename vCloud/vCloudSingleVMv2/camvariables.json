@@ -1,0 +1,95 @@
+{
+  "template_input_params": [
+    {
+      "name": "vm_1_name",
+      "label": "VM name at vCloud level",
+      "type": "string",
+      "default": "server01",
+      "description": "VM name at vCloud level",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_password",
+      "label": "root or administrator password",
+      "type": "string",
+      "description": "root or administrator password",
+      "required": true,
+      "secured": true,
+      "hidden": false,
+      "immutable": false
+    },    
+    {
+      "name": "vm_1_image",
+      "label": "OS Image",
+      "type": "string",
+      "description": "OS image to deploy",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "options": [
+        {
+          "value": "New-RedHat-7-Template-Official",
+          "label": "New-RedHat-7-Template-Official",
+          "default": "true"
+        },
+        {
+          "value": "CentOS-7-Template-Official",
+          "label": "CentOS-7-Template-Official"
+        },
+        {
+          "value": "Windows-2016-Template-Official",
+          "label": "Windows-2016-Template-Official"
+        }
+      ]
+    },
+    {
+      "name": "vm_1_vcpu",
+      "label": "Virtual CPUs",
+      "type": "string",
+      "default": "1",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_memory",
+      "label": "Memory in MB",
+      "type": "string",
+      "description": "RAM in MB",
+      "default": "1024",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_subnet",
+      "label": "Subnet",
+      "type": "string",
+      "default": "my-net",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "options":[
+        {
+          "value": "prod",
+          "label": "prod",
+          "default": "true"
+        },
+        {
+          "value": "QA",
+          "label":"QA"
+        }
+      ]
+    }
+  ],
+  "template_output_params": []
+}
