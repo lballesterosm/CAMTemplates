@@ -1,6 +1,6 @@
 {
-    "name": "vCloudSingleVMv2",
-    "description": "Create a Virtual Machine with single vnic on vCloud",
+    "name": "Openshiftv4 deployment on vCloud",
+    "description": "Create an Openshift cluster ver 4.8 on vCloud",
     "version": "1.0",
     "manifest": {
       "template_type": "Terraform",
