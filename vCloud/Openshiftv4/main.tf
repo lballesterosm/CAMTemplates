@@ -1,4 +1,8 @@
 
+variable "cantidad" {
+  
+}
+
 variable "vm_1_vcpu" {
     
 }
