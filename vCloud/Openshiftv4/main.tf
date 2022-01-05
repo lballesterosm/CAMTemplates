@@ -86,19 +86,6 @@ resource "vcd_vm" "workers" {
 }
 
 
-output "masters_info" {
-  value = "${formatlist(
-    "%s = %s, %s", 
-    vcd_vm.masters[*].name,
-    vcd_vm.masters[*].network.0.ip,
-	vcd_vm.masters[*].network.0.mac
-  )}"
-
-    depends_on = [
-      vcd_vm.masters
-    ]
-}
-
 output "workers_info" {
   value = "${formatlist(
     "%s = %s, %s", 
@@ -109,6 +96,19 @@ output "workers_info" {
 
     depends_on = [
       vcd_vm.workers
+    ]
+}
+
+output "masters_info" {
+  value = "${formatlist(
+    "%s = %s, %s", 
+    vcd_vm.masters[*].name,
+    vcd_vm.masters[*].network.0.ip,
+	vcd_vm.masters[*].network.0.mac
+  )}"
+
+    depends_on = [
+      vcd_vm.masters
     ]
 }
 
