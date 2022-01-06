@@ -1,0 +1,43 @@
+{
+    "name": "vCloud-OCP-HelperServer",
+    "description": "Create a Virtual Machine with single vnic on vCloud for OCP deployment support",
+    "version": "1.0",
+    "manifest": {
+      "template_type": "Terraform",
+      "template_format": "HCL",
+      "template_provider": "vcd",
+      "template": {
+        "templateOutput": "",
+        "templateVariables": "",
+        "templateData": ""
+      },
+      "template_source": {
+        "githubRepoUrl": "",
+        "githubAccessToken": "",
+        "relativePathToTemplateFolder": "/ocp-helperserver",
+        "templateFileName": "main.tf"
+      }
+    },
+    "metadata": {
+        "displayName": "vCloud-OCP-HelperServer",
+        "longDescription": "Create a Virtual Machine with single vnic on vCloud for OCP deployment support",
+        "bullets": [
+         {
+           "title": "Clouds",
+           "description": "vCloud"
+         },
+         {
+           "title": "Topology",
+           "description": "Single virtual machine"
+         },
+         {
+           "title": "Default Virtual Machine settings",
+           "description": "Standard machine type with 2 virtual CPU and 8 GB of memory."
+         },
+         {
+           "title": "Usage and special notes",
+           "description": "A typical deployment takes < 5 minutes."
+         }
+        ]
+    }
+  }
