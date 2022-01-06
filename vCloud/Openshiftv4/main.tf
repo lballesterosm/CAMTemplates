@@ -74,7 +74,7 @@ resource "vcd_vm" "workers" {
   catalog_name     = "Public Catalog"
   cpus             = var.vm_1_vcpu
   memory           = var.vm_1_memory
-  computer_name    = "worker${count.index+1}"
+  computer_name    = "worker-${count.index+1}"
 
   network {
     name               = var.vm_1_subnet
