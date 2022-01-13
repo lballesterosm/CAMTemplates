@@ -1,5 +1,6 @@
 ---
-sh_gen_key: trueinstall_filetranspiler: false
+sh_gen_key: true
+install_filetranspiler: false
 taticips: false
 force_ocp_download: false
 remove_old_config_files: false
