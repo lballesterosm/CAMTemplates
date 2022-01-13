@@ -2,15 +2,6 @@
 variable "vm_1_name" {
     
 }
-variable "vm_1_vcpu" {
-    
-}
-variable "vm_1_memory" {
-    
-}
-variable "vm_1_image" {
-    
-}
 
 variable "vm_1_subnet" {
 
