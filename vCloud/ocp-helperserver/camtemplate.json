@@ -1,5 +1,5 @@
 {
-    "name": "vCloud-OCP-HelperServer",
+    "name": "OCP Helper Server",
     "description": "Create a Virtual Machine with single vnic on vCloud for OCP deployment support",
     "version": "1.0",
     "manifest": {
