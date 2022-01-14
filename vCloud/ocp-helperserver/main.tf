@@ -20,13 +20,13 @@ resource "vcd_vm" "VirtualMachine" {
   
   org = "dae691dbea51489088e89e813ba339b9"
   vdc = "vmware-dc"
-  name = "helperserver2"
+  name = var.vm_1_name
 
   catalog_name  = "Public Catalog"
   template_name = "RedHat-7-Template-Official"
   cpus          = "2"
   memory        = "8192"
-  computer_name = "helperserver2"
+  computer_name = var.vm_1_name
 
   network {
     name               = var.vm_1_subnet
@@ -119,7 +119,7 @@ resource "vcd_vm" "VirtualMachine" {
 data "vcd_vm" "target_vm" {
    org = "dae691dbea51489088e89e813ba339b9"
    vdc = "vmware-dc"
-   name     = "helperserver"
+   name     = var.vm_1_name
    depends_on = [
      vcd_vm.VirtualMachine
    ]
