@@ -109,6 +109,8 @@ resource "vcd_vm" "VirtualMachine" {
 	  "cd /",
 	  "cd /tmp/ocp4-helpernode",
 	  "ansible-playbook -e @vars.yaml tasks/main.yml",
+    "yum groupinstall \"Server with GUI\"",
+    "systemctl set-default graphical.target",
 	  	  
 	] 
   }
