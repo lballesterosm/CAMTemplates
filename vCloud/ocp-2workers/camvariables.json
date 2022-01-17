@@ -43,6 +43,28 @@
       "secured": false,
       "hidden": false,
       "immutable": false
+    },
+    {
+      "name": "ocp_domain",
+      "label": "OCP domain namespace",
+      "type": "string",
+      "default": "example.com",
+      "description": "OCP domain namespace",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "cluster_id",
+      "label": "OCP cluster name",
+      "type": "string",
+      "default": "my-cluster",
+      "description": "OCP cluster name",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
     }
   ],
   "template_output_params": []
