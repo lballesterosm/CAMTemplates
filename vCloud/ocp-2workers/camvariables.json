@@ -1,0 +1,49 @@
+{
+  "template_input_params": [
+    {
+      "name": "vm_1_name",
+      "label": "VM name at vCloud level",
+      "type": "string",
+      "default": "ocp-helperserver",
+      "description": "VM name at vCloud level",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_1_subnet",
+      "label": "Subnet",
+      "type": "string",
+      "default": "my-net",
+      "description": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "options":[
+        {
+          "value": "prod",
+          "label": "prod",
+          "default": "true"
+        },
+        {
+          "value": "QA",
+          "label":"QA"
+        }
+      ]
+    },
+    {
+      "name": "vm_ip_address",
+      "label": "VM internal ip address",
+      "type": "string",
+      "default": "192.168.2.5",
+      "description": "VM internal ip address",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    }
+  ],
+  "template_output_params": []
+}
