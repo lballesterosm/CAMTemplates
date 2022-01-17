@@ -1,9 +1,9 @@
 
-variable "vm_1_name" {
+variable "vm_name" {
     
 }
 
-variable "vm_1_subnet" {
+variable "vm_subnet" {
 
 }
 
@@ -20,16 +20,16 @@ resource "vcd_vm" "VirtualMachine" {
   
   org = "dae691dbea51489088e89e813ba339b9"
   vdc = "vmware-dc"
-  name = var.vm_1_name
+  name = var.vm_name
 
   catalog_name  = "Public Catalog"
   template_name = "RedHat-7-Template-Official"
   cpus          = "2"
   memory        = "8192"
-  computer_name = var.vm_1_name
+  computer_name = var.vm_name
 
   network {
-    name               = var.vm_1_subnet
+    name               = var.vm_subnet
     type               = "org"
 	ip_allocation_mode = "MANUAL"
 	ip                 = var.vm_ip_address
@@ -59,6 +59,7 @@ resource "vcd_vm" "VirtualMachine" {
       "rpm -ivh http://52.117.132.7/pub/katello-ca-consumer-latest.noarch.rpm",
 	  "/tmp/linux_activation.sh",
 	  "subscription-manager register --org=customer --activationkey=ic4v_shared_fe534526-5cfb-4d0c-b241-7f2b3774d1db --force",
+	  "sleep 3",
       "subscription-manager repos --enable=rhel-7-server-extras-rpms",
       "yum -y install podman",
 #	  "chmod +x /tmp/helper_install.sh",
@@ -69,7 +70,7 @@ resource "vcd_vm" "VirtualMachine" {
 	  "echo --- > /tmp/ocp4-helpernode/vars.yaml",
 	  "echo disk: sda >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo helper: >> /tmp/ocp4-helpernode/vars.yaml",
-	  "echo \"  name: \"helperserver\"\" >> /tmp/ocp4-helpernode/vars.yaml",
+	  "echo \"  name: \"${var.vm_name}\"\" >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo \"  ipaddr: \"192.168.2.5\"\" >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo dns: >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo \"  domain: \"example.com\"\" >> /tmp/ocp4-helpernode/vars.yaml",
