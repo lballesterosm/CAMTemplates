@@ -11,6 +11,14 @@ variable "vm_ip_address" {
 
 }
 
+variable "ocp_domain" {
+
+}
+
+variable "cluster_id" {
+
+}
+
 provider "vcd" {
   version = "3.4.0"
 
@@ -52,10 +60,16 @@ resource "vcd_vm" "VirtualMachine" {
     source      = "./script/helper_install.sh"
 	destination = "/tmp/helper_install.sh"
   }
+    provisioner "file" {
+    source      = "./script/ocp-config.sh"
+	destination = "/tmp/ocp-config.sh"
+  }
   
   provisioner "remote-exec" {
     inline = [
 	  "chmod +x /tmp/linux_activation.sh",
+	  "chmod +x /tmp/helper_install.sh",
+	  "chmod +x /tmp/ocp-config.sh",
       "rpm -ivh http://52.117.132.7/pub/katello-ca-consumer-latest.noarch.rpm",
 	  "/tmp/linux_activation.sh",
 	  "subscription-manager register --org=customer --activationkey=ic4v_shared_fe534526-5cfb-4d0c-b241-7f2b3774d1db --force",
@@ -66,17 +80,17 @@ resource "vcd_vm" "VirtualMachine" {
       "yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm",
       "yum -y install ansible git",
 	  "sleep 3",
-    "git clone https://github.com/lballesterosm/ocp4-helpernode /tmp/ocp4-helpernode",
+      "git clone https://github.com/lballesterosm/ocp4-helpernode /tmp/ocp4-helpernode",
 	  "echo --- > /tmp/ocp4-helpernode/vars.yaml",
 	  "echo disk: sda >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo helper: >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo \"  name: \"${var.vm_name}\"\" >> /tmp/ocp4-helpernode/vars.yaml",
-	  "echo \"  ipaddr: \"192.168.2.5\"\" >> /tmp/ocp4-helpernode/vars.yaml",
+	  "echo \"  ipaddr: \""{var.vm_ip_address}\"\" >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo dns: >> /tmp/ocp4-helpernode/vars.yaml",
-	  "echo \"  domain: \"example.com\"\" >> /tmp/ocp4-helpernode/vars.yaml",
-	  "echo \"  clusterid: \"ocp4\"\" >> /tmp/ocp4-helpernode/vars.yaml",
+	  "echo \"  domain: \"${var.ocp_domain}\"\" >> /tmp/ocp4-helpernode/vars.yaml",
+	  "echo \"  clusterid: \"${var.cluster_id}\"\" >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo \"  forwarder1: \"8.8.8.8\"\" >> /tmp/ocp4-helpernode/vars.yaml",
-	  "echo \"  forwarder9: \"8.8.4.4\"\" >> /tmp/ocp4-helpernode/vars.yaml",
+	  "echo \"  forwarder2: \"8.8.4.4\"\" >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo dhcp: >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo \"  router: \"192.168.2.1\"\" >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo \"  bcast: \"192.168.2.255\"\" >> /tmp/ocp4-helpernode/vars.yaml",
@@ -110,9 +124,11 @@ resource "vcd_vm" "VirtualMachine" {
 	  "cd /",
 	  "cd /tmp/ocp4-helpernode",
 	  "ansible-playbook -e @vars.yaml tasks/main.yml",
-    "yum -y groupinstall \"Server with GUI\"",
-    "systemctl set-default graphical.target",
-	  	  
+      "yum -y groupinstall \"Server with GUI\"",
+      "systemctl set-default graphical.target",
+      "/tmp/ocp-config.sh ${var.ocp_domain} ${cluster_id}"
+	  
+
 	] 
   }
   
