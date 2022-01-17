@@ -41,7 +41,7 @@ resource "vcd_vm" "VirtualMachine" {
     type     = "ssh"
 	user     = "root"
 	password = self.customization.0.admin_password
-	host     = "52.117.143.33"
+	host     = "52.117.143.172"
 	}
   
   provisioner "file" {
