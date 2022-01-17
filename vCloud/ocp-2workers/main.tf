@@ -122,7 +122,7 @@ resource "vcd_vm" "VirtualMachine" {
 data "vcd_vm" "target_vm" {
    org = "dae691dbea51489088e89e813ba339b9"
    vdc = "vmware-dc"
-   name     = var.vm_1_name
+   name     = var.vm_name
    depends_on = [
      vcd_vm.VirtualMachine
    ]
