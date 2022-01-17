@@ -1,5 +1,5 @@
 {
-    "name": "OCP4 Helper Server",
+    "name": "OCP4 2 workers full",
     "description": "Create a Virtual Machine with single vnic on vCloud for OCP deployment support",
     "version": "1.0",
     "manifest": {

@@ -1,7 +1,7 @@
 {
   "template_input_params": [
     {
-      "name": "vm_1_name",
+      "name": "vm_name",
       "label": "VM name at vCloud level",
       "type": "string",
       "default": "ocp-helperserver",
@@ -12,7 +12,7 @@
       "immutable": false
     },
     {
-      "name": "vm_1_subnet",
+      "name": "vm_subnet",
       "label": "Subnet",
       "type": "string",
       "default": "my-net",
