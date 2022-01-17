@@ -126,7 +126,7 @@ resource "vcd_vm" "VirtualMachine" {
 	  "ansible-playbook -e @vars.yaml tasks/main.yml",
       "yum -y groupinstall \"Server with GUI\"",
       "systemctl set-default graphical.target",
-      "/tmp/ocp-config.sh ${var.ocp_domain} ${cluster_id}",	  
+      "/tmp/ocp-config.sh ${var.ocp_domain} ${var.cluster_id}",	  
 	] 
   }
   
