@@ -85,7 +85,7 @@ resource "vcd_vm" "VirtualMachine" {
 	  "echo disk: sda >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo helper: >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo \"  name: \"${var.vm_name}\"\" >> /tmp/ocp4-helpernode/vars.yaml",
-	  "echo \"  ipaddr: \"{var.vm_ip_address}\"\" >> /tmp/ocp4-helpernode/vars.yaml",
+	  "echo \"  ipaddr: \"${var.vm_ip_address}\"\" >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo dns: >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo \"  domain: \"${var.ocp_domain}\"\" >> /tmp/ocp4-helpernode/vars.yaml",
 	  "echo \"  clusterid: \"${var.cluster_id}\"\" >> /tmp/ocp4-helpernode/vars.yaml",

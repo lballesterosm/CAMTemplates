@@ -1,4 +1,3 @@
-mkdir /tmp/.ssh
 mkdir /tmp/$2
 mkdir /tmp/bkp-ocp-config
 cd /tmp/$2
