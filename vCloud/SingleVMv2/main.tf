@@ -44,8 +44,8 @@ resource "vcd_vm" "VirtualMachine" {
   network {
     name               = var.vm_1_subnet
     type               = "org"
-	ip_allocation_mode = "POOL"
-	is_primary = true
+	  ip_allocation_mode = "POOL"
+	  is_primary         = true
   }
 
 
