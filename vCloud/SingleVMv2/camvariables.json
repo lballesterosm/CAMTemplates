@@ -22,8 +22,8 @@
       "immutable": false,
       "options": [
         {
-          "value": "New-RedHat-7-Template-Official",
-          "label": "New-RedHat-7-Template-Official",
+          "value": "RedHat-7-Template-Official",
+          "label": "RedHat-7-Template-Official",
           "default": "true"
         },
         {
