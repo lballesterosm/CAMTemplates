@@ -14,7 +14,7 @@
       "template_source": {
         "githubRepoUrl": "",
         "githubAccessToken": "",
-        "relativePathToTemplateFolder": "/vCloudSingleVMv2",
+        "relativePathToTemplateFolder": "/SingleVMv2",
         "templateFileName": "main.tf"
       }
     },
