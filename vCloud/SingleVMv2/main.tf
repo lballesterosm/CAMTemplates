@@ -18,13 +18,6 @@ variable "vm_1_subnet" {
 
 
 provider "vcd" {
-  user                 = "admin"
-  password             = "JeNDT5CXQUVSJJrKT"
-  auth_type            = "integrated"
-  org                  = "dae691dbea51489088e89e813ba339b9"
-  url                  = "https://daldir01.vmware-solutions.cloud.ibm.com/api"
-  max_retry_timeout    = "120"
-  allow_unverified_ssl = "true"
   version              = "3.4.0"
 
 }
