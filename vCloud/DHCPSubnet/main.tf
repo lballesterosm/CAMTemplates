@@ -1,7 +1,11 @@
 provider "vcd" {
-  version = "3.4.0"
-
+  user      = "admin"
+  password  = "JeNDT5CXQUVSJJrKT"
+  version   = "3.4.0"
+  org       = "dae691dbea51489088e89e813ba339b9"
+  url       = "https://daldir01.vmware-solutions.cloud.ibm.com/api"  
 }
+
 variable "subnet_name" {
 
 }
