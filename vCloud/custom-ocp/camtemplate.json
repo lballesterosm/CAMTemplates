@@ -1,6 +1,6 @@
 {
-    "name": "OCP4 2 workers full",
-    "description": "Create a Virtual Machine with single vnic on vCloud for OCP deployment support",
+    "name": "OCP4 deployment full",
+    "description": "Create a OCP ver 4.6+ and helperserver with base services",
     "version": "1.0",
     "manifest": {
       "template_type": "Terraform",
@@ -14,13 +14,13 @@
       "template_source": {
         "githubRepoUrl": "",
         "githubAccessToken": "",
-        "relativePathToTemplateFolder": "/ocp-helperserver",
+        "relativePathToTemplateFolder": "/custom-ocp",
         "templateFileName": "main.tf"
       }
     },
     "metadata": {
-        "displayName": "vCloud-OCP-HelperServer",
-        "longDescription": "Create a Virtual Machine with single vnic on vCloud for OCP deployment support",
+        "displayName": "vCloud-OCP-Full",
+        "longDescription": "Create a OCP ver 4.6+ and helperserver with base services",
         "bullets": [
          {
            "title": "Clouds",
@@ -28,15 +28,15 @@
          },
          {
            "title": "Topology",
-           "description": "Single virtual machine"
+           "description": "OCP in selected network"
          },
          {
-           "title": "Default Virtual Machine settings",
-           "description": "Standard machine type with 2 virtual CPU and 8 GB of memory."
+           "title": "Default OCP settings",
+           "description": "OCP 4.6 with 3 masters + 2 workers (default)"
          },
          {
            "title": "Usage and special notes",
-           "description": "A typical deployment takes < 5 minutes."
+           "description": "A typical deployment takes along 50 minutes."
          }
         ]
     }

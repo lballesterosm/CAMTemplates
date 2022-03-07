@@ -1,11 +1,11 @@
 {
   "template_input_params": [
     {
-      "name": "vm_name",
-      "label": "VM name at vCloud level",
+      "name": "cluster_id",
+      "label": "Cluster name",
       "type": "string",
-      "default": "srv-helperserver",
-      "description": "VM name at vCloud level",
+      "default": "my-ocp",
+      "description": "Openshift Cluster name",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -15,7 +15,7 @@
       "name": "vm_subnet",
       "label": "Subnet",
       "type": "string",
-      "default": "my-net",
+      "default": "prod",
       "description": "",
       "required": true,
       "secured": false,
@@ -34,14 +34,36 @@
       ]
     },
     {
-      "name": "vm_ip_address",
-      "label": "VM internal ip address",
+      "name": "cantidad",
+      "label": "Workers quantity",
       "type": "string",
-      "default": "192.168.2.50",
-      "description": "VM internal ip address",
+      "default": "2",
+      "description": "Workers quantity",
       "required": true,
       "secured": false,
-      "hidden": false,
+      "hidden": true,
+      "immutable": false
+    },
+    {
+      "name": "vm_vcpu",
+      "label": "Workers CPU",
+      "type": "string",
+      "default": "2",
+      "description": "Workers CPU",
+      "required": true,
+      "secured": false,
+      "hidden": true,
+      "immutable": false
+    },
+    {
+      "name": "vm_memory",
+      "label": "Workers RAM",
+      "type": "string",
+      "default": "2048",
+      "description": "Workers RAM",
+      "required": true,
+      "secured": false,
+      "hidden": true,
       "immutable": false
     },
     {
@@ -56,14 +78,25 @@
       "immutable": false
     },
     {
-      "name": "cluster_id",
-      "label": "OCP cluster name",
+      "name": "vm_name",
+      "label": "Helperserver name",
       "type": "string",
-      "default": "my-cluster",
-      "description": "OCP cluster name",
+      "default": "helperserver",
+      "description": "Helperserver name",
       "required": true,
       "secured": false,
       "hidden": false,
+      "immutable": false
+    },
+    {
+      "name": "vm_ip_address",
+      "label": "VM internal ip address",
+      "type": "string",
+      "default": "192.168.2.50",
+      "description": "VM internal ip address",
+      "required": true,
+      "secured": false,
+      "hidden": true,
       "immutable": false
     }
   ],
