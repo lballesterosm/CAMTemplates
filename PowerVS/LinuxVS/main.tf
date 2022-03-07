@@ -22,10 +22,6 @@ variable "power_placement_group" {
 
 }
 
-variable "power_ssh_key" {
-
-}
-
 variable "power_image" {
 
 }
@@ -67,7 +63,7 @@ resource "ibm_pi_instance" "VirtualServerInstance" {
     pi_processors         = var.power_cores
     pi_proc_type          = var.power_core_type
     pi_image_id           = data.ibm_pi_image.power_images.id
-    pi_key_pair_name      = var.power_ssh_key
+    pi_key_pair_name      = "ssh_access_key"
     pi_sys_type           = var.power_machine_type
     pi_pin_policy         = var.power_vm_pinning
     pi_cloud_instance_id  = "c2af394e-33b8-4154-9275-f69f5d65dc0d"

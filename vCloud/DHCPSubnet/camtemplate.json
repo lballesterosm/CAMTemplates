@@ -14,7 +14,7 @@
       "template_source": {
         "githubRepoUrl": "",
         "githubAccessToken": "",
-        "relativePathToTemplateFolder": "/vCloudDHCPSubnet",
+        "relativePathToTemplateFolder": "/DHCPSubnet",
         "templateFileName": "main.tf"
       }
     },

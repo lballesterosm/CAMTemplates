@@ -106,17 +106,6 @@
         ]
       },      
       {
-        "name": "power_ssh_key",
-        "label": "power_ssh_key",
-        "type": "string",
-        "default": "power_key",
-        "description": "",
-        "required": true,
-        "secured": false,
-        "hidden": false,
-        "immutable": false
-      },
-      {
         "name": "power_machine_type",
         "label": "power_machine_type",
         "type": "string",

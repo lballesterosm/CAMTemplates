@@ -14,13 +14,13 @@
       "template_source": {
         "githubRepoUrl": "",
         "githubAccessToken": "",
-        "relativePathToTemplateFolder": "/vCloudSingleVMv2",
+        "relativePathToTemplateFolder": "/vCloudMultiVMs",
         "templateFileName": "main.tf"
       }
     },
     "metadata": {
         "displayName": "vCloudSingleVM",
-        "longDescription": "Create a Virtual Machine with single vnic on vCloud",
+        "longDescription": "Create n Virtual Machines with single vnic on vCloud",
         "bullets": [
          {
            "title": "Clouds",
@@ -28,7 +28,7 @@
          },
          {
            "title": "Topology",
-           "description": "Single virtual machine"
+           "description": "Multi virtual machine with the same parameters"
          },
          {
            "title": "Default Virtual Machine settings",
@@ -36,7 +36,7 @@
          },
          {
            "title": "Usage and special notes",
-           "description": "A typical deployment takes < 1 minute."
+           "description": "A typical deployment takes < 5 minute per VM."
          }
         ]
     }
