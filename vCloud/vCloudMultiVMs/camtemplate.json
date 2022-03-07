@@ -1,5 +1,5 @@
 {
-    "name": "vCloudSingleVMv2",
+    "name": "vCloudMultiVMs",
     "description": "Create a Virtual Machine with single vnic on vCloud",
     "version": "1.0",
     "manifest": {
@@ -19,7 +19,7 @@
       }
     },
     "metadata": {
-        "displayName": "vCloudSingleVM",
+        "displayName": "vCloudMultiVMs",
         "longDescription": "Create n Virtual Machines with single vnic on vCloud",
         "bullets": [
          {

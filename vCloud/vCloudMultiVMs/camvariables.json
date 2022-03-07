@@ -1,18 +1,29 @@
 {
   "template_input_params": [
     {
-      "name": "vm_1_name",
+      "name": "vm_name",
       "label": "VM name at vCloud level",
       "type": "string",
-      "default": "server01",
+      "default": "server",
       "description": "VM name at vCloud level",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false
+    },    
+    {
+      "name": "cantidad",
+      "label": "VM quantity to be created",
+      "type": "string",
+      "default": "1",
+      "description": "VM quantity to be created",
       "required": true,
       "secured": false,
       "hidden": false,
       "immutable": false
     },
     {
-      "name": "vm_1_image",
+      "name": "vm_image",
       "label": "OS Image",
       "type": "string",
       "description": "OS image to deploy",
@@ -22,8 +33,8 @@
       "immutable": false,
       "options": [
         {
-          "value": "New-RedHat-7-Template-Official",
-          "label": "New-RedHat-7-Template-Official",
+          "value": "RedHat-7-Template-Official",
+          "label": "RedHat-7-Template-Official",
           "default": "true"
         },
         {
@@ -37,7 +48,7 @@
       ]
     },
     {
-      "name": "vm_1_vcpu",
+      "name": "vm_vcpu",
       "label": "Virtual CPUs",
       "type": "string",
       "default": "1",
@@ -48,7 +59,7 @@
       "immutable": false
     },
     {
-      "name": "vm_1_memory",
+      "name": "vm_memory",
       "label": "Memory in MB",
       "type": "string",
       "description": "RAM in MB",
@@ -59,7 +70,7 @@
       "immutable": false
     },
     {
-      "name": "vm_1_subnet",
+      "name": "vm_subnet",
       "label": "Subnet",
       "type": "string",
       "default": "my-net",
