@@ -33,7 +33,7 @@ resource "vcd_vm" "VirtualMachine" {
   count = var.cantidad
   org   = "dae691dbea51489088e89e813ba339b9"
   vdc   = "vmware-dc"
-  name  = "var.vm_1_name-${count.index+1}"
+  name  = "${var.vm_name}-${count.index+1}"
   
   catalog_name  = "Public Catalog"
   template_name = var.vm_image
